@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        VANTA.BIRDS({
+          el: "#my-background",
+          backgroundColor: 0x000000,
+          color1: 0xff0000,
+          color2: 0x00ff00,
+          birdSize: 1.5,
+          wingSpan: 20,
+          speedLimit: 4,
+          separation: 50,
+          alignment: 50,
+          cohesion: 50,
+          quantity: 4
+        });
+      });
+    </script>
+    <title>Music App</title>
+  </head>
+  <body>
+    <div id="my-background" style="position: fixed; top:0; left:0; width:100vw; height:100vh; z-index:-1;"></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
