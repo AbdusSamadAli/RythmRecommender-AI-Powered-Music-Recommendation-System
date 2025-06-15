@@ -22,7 +22,7 @@ RythmRecommender is a full-stack web application that delivers personalized musi
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js, Tailwind CSS
+- **Frontend**: React.js, Tailwind CSS, Framer Motion, Vanta js
 - **Backend**: Node.js, Express.js
 - **Authentication**: JWT & Google Sign-In
 - **Database**: MongoDB Atlas with Prisma ORM
