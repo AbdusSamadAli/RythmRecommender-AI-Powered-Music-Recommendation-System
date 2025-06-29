@@ -33,4 +33,5 @@ Backend: Node.js, Express.js
 Authentication: JWT (JSON Web Tokens)
 
 Database: MongoDB Atlas
+
 External APIs: Spotify Web API, Hugging Face Inference API
