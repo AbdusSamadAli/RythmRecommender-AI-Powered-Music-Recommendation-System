@@ -85,11 +85,42 @@ const StatsDashboard = () => {
         label: "Mood Distribution",
         data: Object.values(moodStats),
         backgroundColor: [
-          "#f87171", "#60a5fa", "#34d399", "#facc15", "#c084fc", "#f97316","#a3e635", "#22d3ee",
+          "#f87171", "#60a5fa", "#34d399", "#facc15",
+          "#c084fc", "#f97316", "#a3e635", "#22d3ee",
         ],
         borderWidth: 1,
       },
     ],
+  };
+
+  const pieOptions = {
+    plugins: {
+      legend: {
+        labels: {
+          color: "#ffffff", 
+          font: {
+            weight: "bold",
+          },
+        },
+      },
+      tooltip: {
+        bodyColor: "#ffffff",     
+        titleColor: "#ffffff",   
+      },
+      title: {
+        display: true,
+        text: "Mood Distribution",
+        color: "#ffffff",         
+        font: {
+          size: 18,
+          weight: "bold",
+        },
+        padding: {
+          top: 10,
+          bottom: 20,
+        },
+      },
+    },
   };
 
   if (error) {
@@ -121,7 +152,7 @@ const StatsDashboard = () => {
 
       {Object.keys(moodStats).length > 0 && (
         <div className="max-w-md mx-auto mb-10">
-          <Pie data={pieData} />
+          <Pie data={pieData} options={pieOptions} />
         </div>
       )}
 
