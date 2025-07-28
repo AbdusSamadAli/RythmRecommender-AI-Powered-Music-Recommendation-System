@@ -74,7 +74,3 @@ It combines **real-time mood analysis** with Spotify's Web API to suggest releva
 
 ---
 
-
-
-
----
