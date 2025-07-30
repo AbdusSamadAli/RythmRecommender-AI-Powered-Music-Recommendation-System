@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const authRoutes = require("./routes/authRoutes");
 const musicRoutes = require("./routes/musicRoutes");
 const usermusicRoutes = require("./routes/usermusicRoutes");
+const { PrismaClient } = require("@prisma/client");
+
 dotenv.config();
 
 const app = express();
@@ -20,9 +22,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/music", musicRoutes);
 app.use("/api/usermusic", usermusicRoutes);
-const { PrismaClient } = require("@prisma/client");
-const prisma = new PrismaClient();
 
+const prisma = new PrismaClient();
 async function checkDbConnection() {
   try {
     const count = await prisma.user.count();
