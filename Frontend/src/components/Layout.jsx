@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
         <footer className="bg-gradient-to-r from-black via-gray-900 to-black text-white py-6 z-10 border-t border-gray-800">
           <div className="container mx-auto text-center space-y-2">
             <p className="font-semibold text-lg">
-              &copy; 2024 HarmonyAI - Your Smart Music Companion
+              &copy; 2025 RythmRecommender - Your Smart Music Companion
             </p>
             <p className="text-sm">
               Powered by AI. Discover music that understands you.
