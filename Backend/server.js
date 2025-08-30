@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const authRoutes = require("./routes/authRoutes");
-const musicRoutes = require("./routes/musicRoutes");
-const usermusicRoutes = require("./routes/usermusicRoutes");
+const recommendmusicRoutes = require("./routes/recommendMusicRoutes");
+const personalizedmusicRoutes = require("./routes/personalizedMusicRoutes");
 dotenv.config();
 
 const app = express();
@@ -18,8 +18,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
-app.use("/api/music", musicRoutes);
-app.use("/api/usermusic", usermusicRoutes);
+app.use("/api/music", recommendmusicRoutes);
+app.use("/api/usermusic", personalizedmusicRoutes);
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
